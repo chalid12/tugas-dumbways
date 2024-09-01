@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hubungi Saya</title>
+    <link rel="stylesheet" href="assets/css/styles-contact.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-left">
+        <div class="logo">
+          <img src="assets/img/logo-du.jpg" alt="Logo DU" />
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="project.html">Proyek Saya</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li>
+            <a href="contact.html" class="contact-button">Hubungi Saya</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container">
+      <h1 class="page-title">Hubungi Saya</h1>
+      <div class="content-wrapper">
+        <form onsubmit="sendEmail(event)" id="contact-form">
+          <div class="form-group">
+            <label for="nama">Nama:</label>
+            <input
+              type="text"
+              id="nama"
+              name="nama"
+              placeholder="Masukkan nama Anda"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Masukkan email Anda"
+            />
+          </div>
+          <div class="form-group">
+            <label for="telepon">Nomor Telepon:</label>
+            <input
+              type="tel"
+              id="telepon"
+              name="telepon"
+              placeholder="Masukkan nomor telepon Anda"
+            />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject:</label>
+            <select id="subject" name="subject">
+              <option value="">Pilih subject</option>
+              <option value="umum">Pertanyaan Umum</option>
+              <option value="proyek">Proyek Baru</option>
+              <option value="kerjasama">Kerjasama</option>
+              <option value="lainnya">Lainnya</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="pesan">Pesan:</label>
+            <textarea
+              id="pesan"
+              name="pesan"
+              rows="5"
+              placeholder="Tulis pesan Anda di sini"
+            ></textarea>
+          </div>
+          <div class="button-group">
+            <button type="submit" value="submit">Kirim Pesan</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="assets/js/contact.js"></script>
+  </body>
+</html>
