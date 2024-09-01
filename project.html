@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyek Saya</title>
+    <link rel="stylesheet" href="assets/css/project.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-left">
+        <div class="logo">
+          <img src="assets/img/logo-du.jpg" alt="Logo DU" />
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="project.html">Proyek Saya</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li>
+            <a href="contact.html" class="contact-button">Hubungi Saya</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container">
+      <h1 class="page-title">Proyek Saya</h1>
+      <div class="content-wrapper">
+        <form onsubmit="inputProject(event)" id="contact-form">
+          <div class="form-group">
+            <label for="namaProject">Nama:</label>
+            <input
+              type="text"
+              id="namaProject"
+              name="namaProject"
+              placeholder="Masukkan nama project"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="form-group">
+                <label for="mulaiProject">Waktu Mulai:</label>
+                <input
+                  type="date"
+                  id="mulaiProject"
+                  name="mulaiProject"
+                  class="input-time"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="akhirProject">Waktu Akhir:</label>
+                <input
+                  type="date"
+                  id="akhirProject"
+                  name="akhirProject"
+                  class="input-time"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="keteranganProject">Keterangan Project:</label>
+            <textarea
+              id="keteranganProject"
+              name="keteranganProject"
+              rows="5"
+              placeholder="Tulis keterangan project"
+              required
+            ></textarea>
+          </div>
+          <h3>Teknologi</h3>
+
+          <div class="container-checkbox">
+            <div class="column left">
+              <label style="font-weight: normal; text-align: center">
+                <input type="checkbox" id="nodeJS" name="teknologi" />
+                Node.js </label
+              ><br />
+              <label style="font-weight: normal; text-align: center">
+                <input type="checkbox" id="reactJS" name="teknologi" />
+                React.js </label
+              ><br />
+            </div>
+            <div class="column right">
+              <label style="font-weight: normal; text-align: center">
+                <input type="checkbox" id="nextJS" name="teknologi" />
+                Next.js </label
+              ><br />
+              <label style="font-weight: normal; text-align: center">
+                <input type="checkbox" id="typeScript" name="teknologi" />
+                TypeScript </label
+              ><br />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="gambarProject">Gambar Project:</label>
+            <input
+              type="file"
+              id="gambarProject"
+              name="gambarProject"
+              accept="image/*"
+              required
+            />
+          </div>
+          <div class="button-group">
+            <button type="submit" value="submit">Kirim Pesan</button>
+          </div>
+        </form>
+      </div>
+      <hr class="line" />
+      <div id="project-list" class="project-list"></div>
+    </main>
+    <script src="assets/js/project.js"></script>
+    <script
+      src="https://kit.fontawesome.com/42aaf70010.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
