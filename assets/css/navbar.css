@@ -1,54 +1,97 @@
-.navbar {
+nav {
+  padding: 10px 30px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 1.5rem;
-  background-color: #f8f9fa;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.nav-left {
-  display: flex;
-  align-items: center;
+  background: #004274;
+  position: relative;
+  height: 70px;
+  font-weight: bold;
+  font-size: large;
 }
 
 .logo img {
-  height: 30px;
+  height: 50px;
   width: auto;
   margin-right: 1.5rem;
 }
 
-.nav-links {
+nav ul {
   display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+nav ul li {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 
-.nav-links li {
-  margin-left: 1.5rem;
-}
-
-.nav-links a {
+nav ul li a {
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  font-size: 0.9rem;
+  color: #fff;
 }
 
-.nav-links a:hover {
-  color: #007bff;
+.menu-icon {
+  display: none;
 }
 
-.nav-links li a[href="contact.html"] {
-  background-color: #808080;
+.menu-icon i {
+  color: #fff;
+  font-size: 30px;
+}
+.btn-contact {
+  background-color: #007bff; /* Warna biru yang lebih cerah untuk tombol */
   color: white;
-  padding: 8px 16px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  text-decoration: none;
+  border-radius: 20px; /* Sudut yang lebih bulat untuk tampilan yang lebih modern */
+  text-align: center;
+  padding: 10px 20px; /* Tambahkan padding untuk membuat tombol lebih besar dan lebih jelas */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Tambahkan efek transisi untuk membuat tombol lebih interaktif */
 }
 
-.nav-links li a[href="contact.html"]:hover {
-  background-color: #666666;
+.btn-contact:hover {
+  background-color: #0056b3; /* Ubah warna tombol saat diarahkan untuk memberikan umpan balik */
+}
+
+@media (max-width: 900px) {
+  nav ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    text-align: center;
+    background: #004274;
+    gap: 0;
+    overflow: hidden;
+  }
+
+  nav ul li {
+    padding: 20px;
+    padding-top: 0;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .btn-contact {
+    background-color: #007bff; /* Warna biru yang lebih cerah untuk tombol */
+    color: white;
+    text-decoration: none;
+    border-radius: 20px; /* Sudut yang lebih bulat untuk tampilan yang lebih modern */
+    text-align: center;
+    padding: 10px 20px; /* Tambahkan padding untuk membuat tombol lebih besar dan lebih jelas */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Tambahkan efek transisi untuk membuat tombol lebih interaktif */
+  }
+
+  .btn-contact:hover {
+    background-color: #0056b3; /* Ubah warna tombol saat diarahkan untuk memberikan umpan balik */
+  }
+
+  #menuList {
+    transition: all 0.5s;
+  }
 }

@@ -8,27 +8,26 @@
     <link rel="stylesheet" href="assets/css/navbar.css" />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="nav-left">
-        <div class="logo">
-          <img src="assets/img/logo-du.jpg" alt="Logo DU" />
-        </div>
-        <ul class="nav-links">
-          <li><a href="index.html">Beranda</a></li>
-          <li><a href="project.html">Proyek Saya</a></li>
-        </ul>
+    <nav>
+      <div class="logo">
+        <img src="assets/img/logo-du.jpg" alt="Logo DU" />
       </div>
-      <div class="nav-right">
-        <ul class="nav-links">
-          <li>
-            <a href="contact.html" class="contact-button">Hubungi Saya</a>
-          </li>
-        </ul>
+      <ul id="menuList">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="testimonial.html">Testimonial</a></li>
+        <li id="contact1">
+          <a class="btn-content" href="contact.html">Contact</a>
+        </li>
+      </ul>
+      <a id="contact2" class="btn-contact" href="contact.html">Contact</a>
+      <div class="menu-icon">
+        <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
       </div>
     </nav>
 
     <main class="container">
-      <h1 class="page-title">Proyek Saya</h1>
+      <h1 class="page-title">Project</h1>
       <div class="content-wrapper">
         <form onsubmit="inputProject(event)" id="contact-form">
           <div class="form-group">
@@ -120,6 +119,7 @@
       <div id="project-list" class="project-list"></div>
     </main>
     <script src="assets/js/project.js"></script>
+    <script src="assets/js/nav.js"></script>
     <script
       src="https://kit.fontawesome.com/42aaf70010.js"
       crossorigin="anonymous"

@@ -1,0 +1,71 @@
+.containerr {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.testimonial {
+  width: 25%;
+  margin: 0px 15px 30px 15px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.quote {
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.author {
+  font-weight: bold;
+  text-align: right;
+}
+
+.profile-testimonial {
+  width: 100%;
+}
+
+.container-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rating-btn {
+  margin: 20px;
+  padding: 0px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgb(4, 154, 235);
+  color: white;
+  cursor: pointer;
+  border-radius: 20%;
+  -webkit-border-radius: 20%;
+  -moz-border-radius: 20%;
+  -ms-border-radius: 20%;
+  -o-border-radius: 20%;
+  transition: background-color 0.3s, color 0.3s; /* Tambahkan efek transisi */
+  border: none; /* Menghilangkan border hitam */
+}
+
+.rating-btn:hover {
+  background-color: #f0f0f0; /* Ganti dengan warna latar belakang saat hover */
+  color: #333; /* Ganti dengan warna teks saat hover */
+}
