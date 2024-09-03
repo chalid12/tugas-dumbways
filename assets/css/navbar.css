@@ -30,7 +30,10 @@ nav ul li a {
   text-decoration: none;
   color: #fff;
 }
-
+a:hover {
+  text-decoration: double;
+  color: #007bff;
+}
 .menu-icon {
   display: none;
 }
@@ -40,18 +43,18 @@ nav ul li a {
   font-size: 30px;
 }
 .btn-contact {
-  background-color: #007bff; /* Warna biru yang lebih cerah untuk tombol */
+  background-color: #007bff;
   color: white;
   text-decoration: none;
-  border-radius: 20px; /* Sudut yang lebih bulat untuk tampilan yang lebih modern */
+  border-radius: 20px;
   text-align: center;
-  padding: 10px 20px; /* Tambahkan padding untuk membuat tombol lebih besar dan lebih jelas */
+  padding: 10px 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Tambahkan efek transisi untuk membuat tombol lebih interaktif */
+  transition: background-color 0.3s ease;
 }
 
 .btn-contact:hover {
-  background-color: #0056b3; /* Ubah warna tombol saat diarahkan untuk memberikan umpan balik */
+  background-color: #0056b3;
 }
 
 @media (max-width: 900px) {
@@ -77,18 +80,18 @@ nav ul li a {
   }
 
   .btn-contact {
-    background-color: #007bff; /* Warna biru yang lebih cerah untuk tombol */
+    background-color: #007bff;
     color: white;
     text-decoration: none;
-    border-radius: 20px; /* Sudut yang lebih bulat untuk tampilan yang lebih modern */
+    border-radius: 20px;
     text-align: center;
-    padding: 10px 20px; /* Tambahkan padding untuk membuat tombol lebih besar dan lebih jelas */
+    padding: 10px 20px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Tambahkan efek transisi untuk membuat tombol lebih interaktif */
+    transition: background-color 0.3s ease;
   }
 
   .btn-contact:hover {
-    background-color: #0056b3; /* Ubah warna tombol saat diarahkan untuk memberikan umpan balik */
+    background-color: #0056b3;
   }
 
   #menuList {

@@ -1,59 +1,31 @@
-const TestimoniData = [
-  {
-    image: "https://picsum.photos/200/300?random=1",
-    content: "Ndak tau kok tanyak saya!?",
-    author: "dodi",
-    rating: 5,
-  },
-  {
-    image: "https://picsum.photos/200/300?random=2",
-    content: "Waka waka ee",
-    author: "mamang",
-    rating: 4,
-  },
-  {
-    image: "https://picsum.photos/200/300?random=3",
-    content: "Ih anak gua mahhh canttiikk, udaahhh kaya",
-    author: "Ayah Ojak",
-    rating: 1,
-  },
-  {
-    image: "https://picsum.photos/200/300?random=4",
-    content: "AKHdkahk....",
-    author: "Lucinta Dede Hidayat?",
-    rating: 2,
-  },
-  {
-    image: "https://picsum.photos/200/300?random=5",
-    content: "gas",
-    author: "dika",
-    rating: 5,
-  },
-  {
-    image: "https://picsum.photos/200/300?random=6",
-    content: "Warmindo Kuy, Warkop Bang Saykotsss",
-    author: "hanung",
-    rating: 3,
-  },
-  {
-    image: "https://picsum.photos/200/300?random=7",
-    content: "Kuy, ",
-    author: "puspus",
-    rating: 2,
-  },
-  {
-    image: "https://picsum.photos/200/300?random=8",
-    content: "baguss",
-    author: "zaa",
-    rating: 4,
-  },
-  {
-    image: "https://picsum.photos/200/300?random=9",
-    content: "danger",
-    author: "Amanda Puspita JKT48",
-    rating: 3,
-  },
-];
+const testimonialPromise = new Promise((resolve, reject) => {
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://api.npoint.io/5173335893adcbe12049", true);
+
+  xhr.onload = function () {
+    if (xhr.status == 200) {
+      resolve(JSON.parse(xhr.response));
+    } else {
+      reject("Error Loaded Data");
+    }
+  };
+
+  xhr.onerror = function () {
+    reject("404 Not Found");
+  };
+
+  xhr.send();
+});
+
+async function loadTestimonials() {
+  try {
+    const response = await testimonialPromise;
+    generateTestimonials(response);
+    applyFilter("all");
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 function generateTestimonials(data) {
   const container = document.getElementById("testimonials-container");
@@ -141,6 +113,5 @@ function applyFilter(type) {
 
 // Pada awalnya tampilkan semua testimoni
 document.addEventListener("DOMContentLoaded", () => {
-  generateTestimonials(TestimoniData);
-  applyFilter("all");
+  loadTestimonials();
 });

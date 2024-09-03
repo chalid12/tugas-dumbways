@@ -61,11 +61,11 @@
   -moz-border-radius: 20%;
   -ms-border-radius: 20%;
   -o-border-radius: 20%;
-  transition: background-color 0.3s, color 0.3s; /* Tambahkan efek transisi */
-  border: none; /* Menghilangkan border hitam */
+  transition: background-color 0.3s, color 0.3s;
+  border: none;
 }
 
 .rating-btn:hover {
-  background-color: #f0f0f0; /* Ganti dengan warna latar belakang saat hover */
-  color: #333; /* Ganti dengan warna teks saat hover */
+  background-color: #f0f0f0;
+  color: #333;
 }
