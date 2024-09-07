@@ -44,22 +44,21 @@ function renderProject() {
 
     projectContainer.innerHTML += `
       <div class="project-list-items"> 
-        <div class="project-card"> 
-          <div class="project-image">
+        <div class="card bg-light"> 
+          <div class="card-img-top">
             <img src="${
               project.gambarProject
-            }" alt="Gambar Project" class="project-img" />
+            }" alt="Gambar Project" class="img-fluid" />
           </div>
-          <div class="project-content">
-            <h1><a href="detail-project.html" target="_blank">${
+          <div class="card-body">
+            <h5 class="card-title"><a href="detail-project.html" target="_blank">${
               project.namaProject
-            }</a> - ${new Date(project.mulaiProject).getFullYear()}</h1>
+            }</a> - ${new Date(project.mulaiProject).getFullYear()}</h5>
             <div class="detail-project">
-              
               Durasi: ${durasi} 
               <br>
             </div>
-            <p class="list-deskripsi">${project.keteranganProject}</p>
+            <p class="card-text">${project.keteranganProject}</p>
             <div class="logo-tech">
               ${
                 project.teknologi.includes("nodeJS")
@@ -83,8 +82,8 @@ function renderProject() {
               }
             </div>
             <div class="btn-group">
-              <button class="btn-edit">Edit</button>
-              <button class="btn-delete" onclick="deleteProject(${index})">Delete</button>
+              <button class="btn btn-primary">Edit</button>
+              <button class="btn btn-danger" onclick="deleteProject(${index})">Delete</button>
             </div>
           </div>
         </div> 

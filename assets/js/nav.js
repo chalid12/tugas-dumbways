@@ -18,7 +18,7 @@ function hideContact1() {
   }
 }
 window.addEventListener("resize", hideContact1);
-window.addEventListener("load", hideContact1); // Panggil saat halaman dimuat
+window.addEventListener("load", hideContact1);
 
 function hideContact2() {
   const contact2 = document.getElementById("contact2");
@@ -29,4 +29,4 @@ function hideContact2() {
   }
 }
 window.addEventListener("resize", hideContact2);
-window.addEventListener("load", hideContact2); // Panggil saat halaman dimuat
+window.addEventListener("load", hideContact2);

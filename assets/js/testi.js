@@ -56,29 +56,24 @@ function filterTestimonials(callback) {
   });
 }
 
-// Callback untuk filter semua testimoni
 function showAll(testimonial) {
   return true;
 }
 
-// Callback untuk filter testimoni positif
 function showPositive(testimonial) {
   return testimonial.getAttribute("data-rating") >= 4;
 }
 
-// Callback untuk filter testimoni negatif
 function showNegative(testimonial) {
   return testimonial.getAttribute("data-rating") <= 2;
 }
 
-// Callback untuk filter testimoni berdasarkan rating
 function showStarRating(rating) {
   return function (testimonial) {
     return testimonial.getAttribute("data-rating") == rating;
   };
 }
 
-// Fungsi untuk menerapkan filter
 function applyFilter(type) {
   switch (type) {
     case "all":
@@ -111,7 +106,6 @@ function applyFilter(type) {
   }
 }
 
-// Pada awalnya tampilkan semua testimoni
 document.addEventListener("DOMContentLoaded", () => {
   loadTestimonials();
 });
